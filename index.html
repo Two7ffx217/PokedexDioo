@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokédex</title>
+    <meta name="description" content="Complete Pokédex with all 151 Generation 1 Pokémon">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="hhh.png" type="image/png">
+    
+    <!-- Fontes -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Press+Start+2P&display=swap" rel="stylesheet">
+    
+    <!-- Ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- CSS -->
+    <!-- Verifique se o caminho do CSS está correto, exemplo para pasta "assets/css" -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="header-content">
+            <div class="logo">
+                <img src="hhh.png" alt="Pokéball" class="logo-icon">
+                <h1>Pokédex</h1>
+            </div>
+            
+            <div class="search-container">
+                <div class="search-box">
+                    <input type="text" id="searchInput" placeholder="Buscar Pokémon..." aria-label="Search Pokémon">
+                    <button id="searchButton" aria-label="Search">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="status-bar">
+            <span id="pokemonCount">0</span>/151 Pokémon
+        </div>
+        
+        <div id="loadingIndicator" class="loading-indicator">
+            <div class="pokeball-spinner"></div>
+        </div>
+
+        <ol id="pokemonList" class="pokemon-grid"></ol>
+
+        <div class="pagination">
+            <button id="loadMoreButton" class="load-more-btn">
+                <i class="fas fa-plus-circle"></i> Carregar Mais
+            </button>
+        </div>
+    </main>
+
+    <button id="backToTop" class="back-to-top" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Modal -->
+    <div id="pokemonModal" class="modal hidden">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div id="modalPokemonDetails"></div>
+        </div>
+    </div>
+
+    <!-- JS -->
+    <!-- Verifique se os caminhos estão corretos, exemplo para pasta "assets/js" -->
+    <script src="pokemon-model.js"></script>
+    <script src="poke-api.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
